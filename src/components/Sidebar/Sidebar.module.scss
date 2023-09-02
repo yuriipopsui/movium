@@ -1,0 +1,22 @@
+
+.sidebar {
+  min-height: 90vh;
+  background: aqua;
+  color:antiquewhite;
+  border-radius: 10px;
+  margin: 3vh 0 3vh 1vw;
+  padding: 15px;
+  & li {
+    margin-bottom: 20px;
+    transition: all 0.5s;
+    & a{
+      color:antiquewhite;
+      transition: all 0.5s;
+
+      &:hover{
+        color: #bec6ec;
+      }
+    }
+  }
+ 
+}
