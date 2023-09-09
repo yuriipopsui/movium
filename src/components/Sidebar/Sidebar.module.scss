@@ -1,22 +1,21 @@
+@import '../../styles/variables.scss';
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
   min-height: 90vh;
-  background: aqua;
-  color:antiquewhite;
-  border-radius: 10px;
-  margin: 3vh 0 3vh 1vw;
-  padding: 15px;
-  & li {
-    margin-bottom: 20px;
-    transition: all 0.5s;
-    & a{
-      color:antiquewhite;
-      transition: all 0.5s;
+  background: $bg-black;
+  color: $white;
+  box-shadow: 2px 0px 90px 0px $purple;
 
-      &:hover{
-        color: #bec6ec;
-      }
-    }
+  &__menu {
+    // background: #000;
   }
- 
+
+  &__menu_films, 
+  &__menu_social,
+  &__menu_settings {
+    font-family: $poppins;
+  }
+
 }

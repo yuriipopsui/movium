@@ -1,0 +1,45 @@
+@import "../../../styles/variables.scss";
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 40px;
+  gap: 35px;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    color: $white;
+    gap: 12px;
+
+    &_link {
+      color: $white;
+      transition: all 0.25s;
+
+      &:hover {
+        color: $light-purple;
+      }
+
+      &:active {
+        transform: translate(1px, 1px);
+      }
+    }
+  }
+}
+
+.films {
+  margin-bottom: 122px;
+}
+
+.social {
+  margin-bottom: 240px;
+}
+.settings {
+  margin-bottom: 60px;
+}
+
+

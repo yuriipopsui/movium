@@ -1,0 +1,27 @@
+@import '../../../styles/variables.scss';
+
+.logo {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  margin: 40px 0 60px 40px;
+
+  &__link {
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 700;
+    color: $white;
+    text-transform: uppercase;
+    margin: 3px 0 0 10px;
+    cursor: pointer;
+    transition: all .25s;
+
+    &:hover {
+      color: $light-purple;
+    }
+
+    &:active {
+      transform: translate(1px, 1px);
+    }
+  }
+}

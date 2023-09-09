@@ -1,17 +1,18 @@
+@import './styles/variables.scss';
+
 .container {
   width: 100vw;
-  // min-height: 100vh;
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: 1.4fr 5fr;
-  column-gap: 1vw;
+  grid-template-columns: 1.7fr 5fr;
+  // column-gap: 1vw;
 }
 .content {
   display: flex;
   justify-content: center;
-  margin: 3vh 1vw 3vh 0;
-  padding: 10px;
-  background-color: #021168;
-  border-radius: 5px;
+  // margin: 3vh 1vw 3vh 0;
+  // padding: 10px;
+  // background-color: #021168;
   text-align: center;
 }
 
