@@ -15,7 +15,6 @@ function App() {
     <div className={styles.container}>
       <Sidebar className={styles.sidebar} />
       <div className={styles.content}>
-        gjjjyjtj
         <Suspense fallback={<Loader />}>
           <Routes>
             {routes.map(
