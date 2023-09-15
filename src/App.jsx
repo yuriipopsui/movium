@@ -7,6 +7,7 @@ import PublicRoute from "./utils/PrivateRoute";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Loader from "./components/Loader/Loader";
 
+
 function App() {
   //Temporary isAuth === true
   const isAuth = true;

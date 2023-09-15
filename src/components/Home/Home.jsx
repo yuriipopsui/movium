@@ -1,14 +1,30 @@
+import { useState, useEffect } from "react";
+import {useSelector, useDispatch} from "react-redux";
 import styles from "./Home.module.scss";
+import { popularMoviesSelector } from "../../store/selectors/popularMoviesSelector";
+import {getPopular} from "../../store/reducers/popularMoviesReducer";
 import Header from "../Header/Header";
 import Banner from '../../assets/banner_temp.png';
 
 const Home = () => {
+  const dispatch = useDispatch();
+const [movies, setMovies] = useState();
+const selectedMovies = useSelector(popularMoviesSelector);
+
+useEffect(() => {
+  dispatch(getPopular())
+}, [dispatch]);
+
+useEffect(() => {
+  setMovies(selectedMovies)
+}, [selectedMovies])
+
+console.log(movies);
+
   return (
     <div className={styles.home}>
     <Header />
     <img className={styles.home__banner} src={Banner} alt="banner" />
-    {/* <div className={styles.home}>Home</div> */}
-    {/* <div className="fgjh">Otherblok</div> */}
     </div>
   
   );
