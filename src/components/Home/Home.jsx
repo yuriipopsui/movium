@@ -5,6 +5,7 @@ import { popularMoviesSelector } from "../../store/selectors/popularMoviesSelect
 import {getPopular} from "../../store/reducers/popularMoviesReducer";
 import Header from "../Header/Header";
 import Banner from '../../assets/banner_temp.png';
+import MovieCard from "../MovieCard/MovieCard"
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -25,6 +26,17 @@ console.log(movies);
     <div className={styles.home}>
     <Header />
     <img className={styles.home__banner} src={Banner} alt="banner" />
+    <div className={styles.home__cardWrapper}>
+     {
+      movies && movies.map(item => (
+        <MovieCard movie={item} key={item.title}/>
+      )
+        // console.log(item)
+        
+      )
+     }
+    </div>
+    
     </div>
   
   );

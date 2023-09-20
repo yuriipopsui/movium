@@ -31,6 +31,7 @@ const NavList = ({ data: { className, listItems },direction, customClassName } )
 NavList.propTypes = {
   data: PropTypes.object,
   direction: PropTypes.string,
+  customClassName: PropTypes.string,
 };
 
 export default NavList;

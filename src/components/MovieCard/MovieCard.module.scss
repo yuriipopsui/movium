@@ -1,0 +1,62 @@
+@import '../../styles/variables.scss';
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: calc(100% / 3.5);
+  border-radius: 20px;
+  margin-bottom: 20px;
+  border: 1px solid $grey;
+
+  &__like {
+    position: absolute;
+    content: '';
+    top: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(99deg, $white 3.36%, rgba(255, 255, 255, 0.00) 238.16%);
+    border: 1px solid $white;
+    border-radius: 8px;
+
+    &_img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  &__info{
+    position: absolute;
+    content: '';
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 5px 0 5px 0;
+    border-radius: 0px 0px 20px 20px;
+    opacity: 0.8;
+    background: linear-gradient(100deg, $white 12.94%, rgba(255, 255, 255, 0.00) 129.1%);
+    backdrop-filter: blur(10px);
+    color: $black;
+
+    &_title{
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 600;
+    }
+    &_description{
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 400;
+    }
+  }
+}

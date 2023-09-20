@@ -1,7 +1,7 @@
 import styles from './Header.module.scss';
 import { headerNavigationList } from '../../config/headerNavigation';
 import NavList from '../common/NavList/NavList';
-import Banner from '../../assets/banner_temp.png';
+// import Banner from '../../assets/banner_temp.png';
 
 function Header() {
   return (
