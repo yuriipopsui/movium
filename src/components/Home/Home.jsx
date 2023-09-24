@@ -26,7 +26,8 @@ console.log(movies);
     <div className={styles.home}>
     <Header />
     <img className={styles.home__banner} src={Banner} alt="banner" />
-    <div className={styles.home__cardWrapper}>
+    
+       <div className={styles.home__cardWrapper}>
      {
       movies && movies.map(item => (
         <MovieCard movie={item} key={item.title}/>
