@@ -13,7 +13,7 @@ export const getTopRatedMovies = createAsyncThunk(
             import.meta.env.VITE_APP_API_KEY
           }&language=en-US&page=1`
         )
-        .then((res) => console.log(res.data.results));
+        // .then((res) => console.log(res.data.results));
       return res.data.results;
     } catch (error) {
       console.log(error.message);
@@ -35,20 +35,20 @@ const topRatedMoviesSlice = createSlice({
     .addCase(getTopRatedMovies.pending, (state) => {
       state.status = 'Loading';
       state.isLoad = true;
-      console.log(state.status);
+      // console.log(state.status);
     })
     .addCase(getTopRatedMovies.fulfilled, (state, action) => {
       state.status = 'Success';
       state.isLoad = false;
       state.movies = action.payload;
-      console.log(state.status);
-      console.log(state.movies);
+      // console.log(state.status);
+      // console.log(state.movies);
     })
     .addCase(getTopRatedMovies.rejected, (state, action) => {
       state.status = 'Failed & Rejected';
       state.isLoad = false;
       state.error = action.error.message;
-      console.log(state.status);
+      // console.log(state.status);
     })
   }
 });

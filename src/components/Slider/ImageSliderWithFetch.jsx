@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "./slick.scss";
 import "./slick-theme.scss";
-import styles from "./Slider.module.scss";
+import styles from "./ImageSlider.module.scss";
 import PropTypes from "prop-types";
 
 import { useState, useEffect } from "react";
@@ -9,30 +9,29 @@ import { useDispatch, useSelector } from "react-redux";
 
 import MovieCard from "../MovieCard/MovieCard";
 
-const ImageSlider = ({sliderTitle, moviesSelector, getMovies, topPosition}) => {
+const ImageSliderWithFetch = ({sliderTitle, moviesSelector, getMovies}) => {
 
   const dispatch = useDispatch();
   const [movies, setMovies] = useState();
   const selectedMovies = useSelector(moviesSelector);
-  // const selectedMovies = useSelector(popularMoviesSelector);
 
   useEffect(() => {
-    dispatch(getMovies);
-    // dispatch(getPopular());
+    dispatch(getMovies());
   }, [dispatch, getMovies]);
 
   useEffect(() => {
     setMovies(selectedMovies);
   }, [selectedMovies]);
 
-  console.log(movies);
+  // console.log(movies);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    // slidesToScroll: 1,
+    swipeToSlide: true,
     arrows: false,
     responsive: [
       {
@@ -62,7 +61,7 @@ const ImageSlider = ({sliderTitle, moviesSelector, getMovies, topPosition}) => {
     ]
   };
   return (
-    <div className={styles.sliderWrapper} style={{top: topPosition}}>
+    <div className={styles.sliderWrapper}>
       <h2 className={styles.sliderWrapper__title}>{sliderTitle}</h2>
       <Slider {...settings}>
         {movies &&
@@ -72,12 +71,12 @@ const ImageSlider = ({sliderTitle, moviesSelector, getMovies, topPosition}) => {
   );
 };
 
-ImageSlider.propTypes = {
+ImageSliderWithFetch.propTypes = {
   sliderTitle: PropTypes.string,
   moviesSelector: PropTypes.func,
   getMovies: PropTypes.func,
-  topPosition: PropTypes.string
+  topPosition: PropTypes.string,
+  movies: PropTypes.array
 }
 
-
-export default ImageSlider;
+export default ImageSliderWithFetch;

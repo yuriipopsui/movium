@@ -4,8 +4,8 @@ import like from '../../assets/icons/like.png';
 
 const MovieCard = ({movie}) => {
 
-  console.log(movie.title);
-  console.log(movie);
+  // console.log(movie.title);
+  // console.log(movie);
   return (
     <div className={styles.card}>
       <div className={styles.card__like}>

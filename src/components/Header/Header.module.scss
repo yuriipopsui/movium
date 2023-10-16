@@ -2,20 +2,16 @@
   position: absolute;
   content: '';
   top: 30px;
-
-
-
+  left: 0;
   width: 100%;
   display: flex;
-  // justify-content: center;
+  justify-content: center;
   align-items: center;
-  // margin-top: 40px;
   z-index: 1;
   &__nav {
     width: 90%;
     display: flex;
     justify-content: space-around;
-    // flex-direction: row;
   }
 
   &__user {

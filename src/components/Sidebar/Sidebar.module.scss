@@ -1,14 +1,15 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .sidebar {
   display: flex;
   flex-direction: column;
 
+  min-width: 20%;
+
   min-height: 90vh;
   background: $bg-black;
   color: $white;
   box-shadow: 2px 0px 90px 0px $purple;
-
   z-index: 1;
 
 }

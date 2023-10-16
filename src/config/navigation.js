@@ -8,6 +8,11 @@ export const navigationListData = {
         iconPath: "/src/assets/icons/film.png",
       },
       {
+        name: "Popular",
+        link: "/popular",
+        iconPath: "/src/assets/icons/coffeCup.png",
+      },
+      {
         name: "Favorites",
         link: "/favorites",
         iconPath: "/src/assets/icons/heart.png",

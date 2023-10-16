@@ -38,15 +38,11 @@ const getPopularSlice = createSlice({
     .addCase(getPopular.pending, (state) => {
       state.status = 'loading';
       state.isLoad = true;
-      console.log(state.status);
     })
     .addCase(getPopular.fulfilled, (state, action) => {
       state.status = 'Success';
-      console.log(action);
       state.movies = action.payload;
       state.isLoad = false;
-      console.log(state.status);
-      console.log(state.movies);
     })
     .addCase(getPopular.rejected, (state, action) => {
       state.status = 'Rejected & Failed';

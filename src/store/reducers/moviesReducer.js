@@ -2,11 +2,11 @@ import { combineReducers } from "@reduxjs/toolkit";
 import nowPlayingMoviesReducer from "./nowPlayingMoviesReducer";
 import popularMoviesReducer from "./popularMoviesReducer";
 import topRatedMoviesReducer from "./topRatedMoviesReducer";
-import upcomingMoviesreducer from "./upcomingMoviesreducer";
+import upComingMoviesReducer from "./upComingMoviesReducer";
 
 export const moviesReducer = combineReducers({
   popular: popularMoviesReducer,
   nowPlaying: nowPlayingMoviesReducer,
   topRated: topRatedMoviesReducer,
-  upcoming: upcomingMoviesreducer
+  upcoming: upComingMoviesReducer
 });
