@@ -1,0 +1,25 @@
+@import '../../../styles/variables.scss';
+.like {
+  position: absolute;
+  content: '';
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(99deg, $white 3.36%, rgba(255, 255, 255, 0.00) 238.16%);
+  border: 1px solid $white;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(.95);
+  }
+
+  &__img {
+    width: 18px;
+    height: 18px;
+  }
+}

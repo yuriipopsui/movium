@@ -19,6 +19,7 @@ const UpComing = () => {
 
   useEffect(() => {
     setMovies(selectedMovies);
+    // Research of work multilpy rerenders in react app
     // if(prevSelectedRef.current !== selectedMovies) {
     //   console.log("SelectedMovies reference changed.");
     //   console.log("Prev reference:", prevSelectedRef.current);
@@ -28,6 +29,7 @@ const UpComing = () => {
     // }
   }, []);
 
+  // Research of work multilpy rerenders in react app
   // if (import.meta.env.VITE_APP_ENV !== "development") {
   //   console.log("Movies: ", movies);
   // }

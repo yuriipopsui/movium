@@ -15,3 +15,7 @@ export const upcomingMoviesSelector = (state) => {
   // console.log(state.movies.upcoming.movies);
   return state.movies.upcoming.movies;
 }
+export const favoritesMoviesSelector = (state) => {
+  // console.log(state.movies.favorites.movies);
+  return state.movies.favorites.movies;
+}
