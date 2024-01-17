@@ -1,16 +1,18 @@
 import styles from "./movieCard.module.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import {
   addFavorites,
   removeFavorites,
 } from "../../store/reducers/favoriteMoviesReducer";
-import { useDispatch, useSelector } from "react-redux";
 import { favoritesMoviesSelector } from "../../store/selectors/moviesSelector";
-
+import playerButton from "../../assets/icons/playFilled.svg";
 import Like from "../common/Like/Like";
 
 const MovieCard = ({ movie }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const favoritesMovies = useSelector(favoritesMoviesSelector);
 
   const favoriteClickHandler = () => {
@@ -19,8 +21,19 @@ const MovieCard = ({ movie }) => {
       : dispatch(addFavorites(movie.id));
   };
 
+  const playClickHandler = (id) => {
+    console.log('PlayButton');
+    console.log(id)
+    return navigate(`/videopage/${id}`)
+  }
+
+ 
   return (
     <div className={styles.card}>
+      <img className={styles.card__playerButton} 
+        src={playerButton} 
+        alt="player button" 
+        onClick={() => playClickHandler(movie.id)} />
       <Like 
         favoritesMovies={favoritesMovies} 
         movieId={movie.id} 

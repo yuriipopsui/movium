@@ -19,3 +19,7 @@ export const favoritesMoviesSelector = (state) => {
   // console.log(state.movies.favorites.movies);
   return state.movies.favorites.movies;
 }
+export const getMovieByIdSelector = (state) => {
+  // console.log(state.movies.movieById.movie);
+  return state.movies.movieById.movie;
+}
