@@ -7,13 +7,13 @@ export const headerNavigationList = {
         link: "/movies",
       },
       {
-        name: "Series",
-        link: "/series",
+        name: "TV Shows",
+        link: "/tv_shows",
       },
-      {
-        name: "Documentaries",
-        link: "/documentaries",
-      }
+      // {
+      //   name: "Documentaries",
+      //   link: "/documentaries",
+      // }
     ]
   },
   userInfo: {

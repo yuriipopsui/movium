@@ -11,6 +11,7 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { moviesReducer } from './reducers/moviesReducer';
+import { showsReducer } from './reducers/showsReducer';
 // import getPopularSlice from "./reducers/popularMoviesReducer";
 // import nowPlayingMoviesSlice from './reducers/nowPlayingMoviesReducer';
 
@@ -20,14 +21,9 @@ const persistConfig = {
   blacklist: [],
 };
 
-// const moviesReducer = combineReducers({
-//   popular: getPopularSlice,
-//   nowPlaying: nowPlayingMoviesSlice
-// });
-
 const rootReducer = combineReducers ({
-      movies: moviesReducer
-
+      movies: moviesReducer,
+      shows: showsReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

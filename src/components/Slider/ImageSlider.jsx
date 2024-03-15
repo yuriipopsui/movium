@@ -47,7 +47,7 @@ const ImageSlider = ({sliderTitle, movies}) => {
       <h2 className={styles.sliderWrapper__title}>{sliderTitle}</h2>
       <Slider {...settings}>
         {movies &&
-          movies.map((item) => <MovieCard movie={item} key={item.title} />)}
+          movies.map((item) => <MovieCard movie={item} key={item.title || item.name} />)} 
       </Slider>
     </div>
   );

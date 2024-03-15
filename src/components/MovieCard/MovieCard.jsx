@@ -27,7 +27,6 @@ const MovieCard = ({ movie }) => {
     return navigate(`/videopage/${id}`)
   }
 
- 
   return (
     <div className={styles.card}>
       <img className={styles.card__playerButton} 

@@ -23,3 +23,7 @@ export const getMovieByIdSelector = (state) => {
   // console.log(state.movies.movieById.movie);
   return state.movies.movieById.movie;
 }
+export const allMoviesSelector = (state) => {
+  // console.log(state.movies.movies.movies);
+  return state.movies.movies.movies;
+}

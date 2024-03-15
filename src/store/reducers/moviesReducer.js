@@ -5,6 +5,7 @@ import topRatedMoviesReducer from "./topRatedMoviesReducer";
 import upComingMoviesReducer from "./upComingMoviesReducer";
 import favoriteMoviesReducer from "./favoriteMoviesReducer";
 import getMovieByIdReducer from "./getMovieByIdReducer";
+import getMoviesReducer from "./getMoviesReducer";
 
 export const moviesReducer = combineReducers({
   popular: popularMoviesReducer,
@@ -12,5 +13,6 @@ export const moviesReducer = combineReducers({
   topRated: topRatedMoviesReducer,
   upcoming: upComingMoviesReducer,
   favorites: favoriteMoviesReducer,
-  movieById: getMovieByIdReducer
+  movieById: getMovieByIdReducer,
+  movies: getMoviesReducer
 });
