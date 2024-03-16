@@ -1,6 +1,7 @@
 import styles from './Header.module.scss';
 import { headerNavigationList } from '../../config/headerNavigation';
 import NavList from '../common/NavList/NavList';
+import SearchBar from '../common/SearchForm/SearchForm';
 // import Banner from '../../assets/banner_temp.png';
 
 function Header() {
@@ -13,6 +14,8 @@ function Header() {
           ))
         }
       </nav>
+
+      <SearchBar />
       <div className={styles.header__user}>user</div>
     </div>
   )

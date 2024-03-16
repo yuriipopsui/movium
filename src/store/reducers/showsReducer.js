@@ -3,4 +3,4 @@ import tvShowReducer from "./tvShowReducer";
 
 export const showsReducer = combineReducers({
   tvShows: tvShowReducer
-})
+});

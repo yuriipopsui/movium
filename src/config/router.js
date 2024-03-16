@@ -44,6 +44,12 @@ const routes = [
     isPublicOnly: false,
   },
   {
+    path: 'search_results',
+    Component: lazy(() => import('../components/SearchPage/SearchPage')),
+    isPrivate: false, // Temporary false, but with Authentication should be true
+    isPublicOnly: false,
+  },
+  {
     path: 'videopage/:id',
     Component: lazy(() => import('../pages/VideoPage/VideoPage')),
     isPrivate: false, // Temporary false, but with Authentication should be true

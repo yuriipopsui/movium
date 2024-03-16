@@ -12,8 +12,7 @@ import {
 import storage from "redux-persist/lib/storage";
 import { moviesReducer } from './reducers/moviesReducer';
 import { showsReducer } from './reducers/showsReducer';
-// import getPopularSlice from "./reducers/popularMoviesReducer";
-// import nowPlayingMoviesSlice from './reducers/nowPlayingMoviesReducer';
+import  searchReducer  from './reducers/searchReducer';
 
 const persistConfig = {
   key: "root",
@@ -23,7 +22,8 @@ const persistConfig = {
 
 const rootReducer = combineReducers ({
       movies: moviesReducer,
-      shows: showsReducer
+      shows: showsReducer,
+      search: searchReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
