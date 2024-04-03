@@ -1,3 +1,5 @@
+import { lazy } from "react"
+
 export const headerNavigationList = {
   filmsInfo: {
     className: "filmsInfo",
@@ -21,7 +23,8 @@ export const headerNavigationList = {
     listItems: [
       {
         name: "search",
-        iconPath: "/src/assets/icons/search.png"
+        iconPath: "/src/assets/icons/search.png",
+        Component: lazy(() => import('../components/common/SearchForm/SearchForm'))
       },
       {
         name: "messages",

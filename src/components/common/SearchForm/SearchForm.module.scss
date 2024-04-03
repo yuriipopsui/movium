@@ -1,0 +1,92 @@
+@import "../../../styles/variables.scss";
+
+.searchForm {
+  position: relative;
+  width: 200px;
+  height: 30px;
+
+  &__form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    &_input {
+      width: 100%;
+      height: 100%;
+      background: $white;
+      border: none;
+      border-radius: 50px;
+      padding-left: 0;
+      outline: none;
+      color: $bg-black;
+      transition: all 2s ease;
+      
+      opacity: 0;
+      visibility: hidden;
+
+      &::placeholder {
+        padding: 0;
+      }
+
+      &_active {
+        width: 100%;
+        height: 100%;
+        padding-left: 10px;
+        
+        opacity: 1;
+        visibility: visible;
+
+        &::placeholder {
+          padding: 10px;
+        }
+      }
+    }
+    &_button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      right: -1px;
+      padding: 0;
+      width: 38px;
+      height: 38px;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      background: $purple;
+      outline: none;
+      border: transparent;
+
+      transition: all .4s cubic-bezier(0.68, 0, 0.205, 0);
+
+      &:focus {
+        outline: none;
+        border: none;
+      }
+
+      &:hover {
+        outline: none;
+        border: none;
+      }
+
+      &_active {
+        background: $grey;
+        border:none;
+        cursor:default;
+      }
+    }
+    &_image {
+      width: 12px;
+      height: 12px;
+    }
+  }
+  &__closeButton {
+    position: absolute;
+    top: -3px;
+    right: -10px;
+    font-size: 12px;
+    color: $white;
+    cursor: pointer;
+  }
+}
