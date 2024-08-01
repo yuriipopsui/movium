@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import styles from "./Trending.module.scss";
 import { topRatedMoviesSelector } from "../../store/selectors/moviesSelector";
 import { getTopRatedMovies } from "../../store/reducers/topRatedMoviesReducer";
-import MoviePage from "../common/MoviePage/MoviePage";
+import MoviePage from "../../components/common/MoviePage/MoviePage";
 
 const Trending = () => {
   const dispatch = useDispatch();
@@ -27,7 +27,7 @@ const Trending = () => {
 
   return (
     <div className={styles.trending}>
-      <h1>Trending</h1>
+      {/* <h1 className={styles.trending__title}>Trending Movies</h1> */}
       <MoviePage
         sliderTitle="Top rated movies"
         movies={movies}

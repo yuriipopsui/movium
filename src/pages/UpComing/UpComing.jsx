@@ -5,13 +5,15 @@ import { useDispatch, useSelector } from "react-redux";
 import styles from "./UpComing.module.scss";
 import { upcomingMoviesSelector } from "../../store/selectors/moviesSelector";
 import { getUpcomingMovies } from "../../store/reducers/upComingMoviesReducer";
-import MoviePage from "../common/MoviePage/MoviePage";
+import MoviePage from "../../components/common/MoviePage/MoviePage";
 
 
 const UpComing = () => {
   const dispatch = useDispatch();
   const selectedMovies = useSelector(upcomingMoviesSelector);
   const [movies, setMovies] = useState([]);
+
+  // console.log(movies);
 
   useEffect(() => {
     dispatch(getUpcomingMovies());
@@ -35,7 +37,7 @@ const UpComing = () => {
   // }
 
   const bannerSource = () => {
-    const randomMovie = movies?.length > 0 && movies[Math.floor(Math.random() * (movies?.length + 1))];
+    const randomMovie = movies?.length > 0 && movies[Math.floor(Math.random() * (movies?.length))];
     return (
       `https://image.tmdb.org/t/p/original/${randomMovie?.backdrop_path}`
     );
@@ -43,7 +45,7 @@ const UpComing = () => {
   
   return (
     <div className={styles.upcoming}>
-      <h1>Coming Soon</h1>
+      {/* <h1 className={styles.upcoming__title}>Coming Soon Movies</h1> */}
       <MoviePage sliderTitle="COMING SOON" movies={movies} bannerSource={bannerSource()} />
     </div>
   );

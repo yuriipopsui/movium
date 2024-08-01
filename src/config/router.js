@@ -3,49 +3,49 @@ import { lazy } from "react";
 const routes = [
   {
     path: '/',
-    Component: lazy(() => import('../components/Home/Home')),
+    Component: lazy(() => import('../pages/Home/Home')),
     isPrivate: false,
     isPublicOnly: false,
   },
   {
     path: '/popular',
-    Component: lazy(() => import('../components/Popular/Popular')),
+    Component: lazy(() => import('../pages/Popular/Popular')),
     isPrivate: false,
     isPublicOnly: false,
   },
   {
     path: 'favorites',
-    Component: lazy(() => import('../components/Favorites/Favorites')),
+    Component: lazy(() => import('../pages/Favorites/Favorites')),
     isPrivate: false, // Temporary false, but with Authentication should be true
     isPublicOnly: false,
   },
   {
     path: 'trending',
-    Component: lazy(() => import('../components/Trending/Trending')),
+    Component: lazy(() => import('../pages/Trending/Trending')),
     isPrivate: false, // Temporary false, but with Authentication should be true
     isPublicOnly: false,
   },
   {
     path: 'coming_soon',
-    Component: lazy(() => import('../components/UpComing/UpComing')),
+    Component: lazy(() => import('../pages/UpComing/UpComing')),
     isPrivate: false, // Temporary false, but with Authentication should be true
     isPublicOnly: false,
   },
   {
     path: 'movies',
-    Component: lazy(() => import('../components/Movies/Movies')),
+    Component: lazy(() => import('../pages/Movies/Movies')),
     isPrivate: false, // Temporary false, but with Authentication should be true
     isPublicOnly: false,
   },
   {
     path: 'tv_shows',
-    Component: lazy(() => import('../components/TvShows/TvShows')),
+    Component: lazy(() => import('../pages/TvShows/TvShows')),
     isPrivate: false, // Temporary false, but with Authentication should be true
     isPublicOnly: false,
   },
   {
     path: 'search_results',
-    Component: lazy(() => import('../components/SearchPage/SearchPage')),
+    Component: lazy(() => import('../pages/SearchPage/SearchPage')),
     isPrivate: false, // Temporary false, but with Authentication should be true
     isPublicOnly: false,
   },

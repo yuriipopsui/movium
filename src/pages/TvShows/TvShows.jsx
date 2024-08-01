@@ -1,10 +1,9 @@
 import { useState, useEffect} from "react";
 import { useSelector, useDispatch} from "react-redux";
 import styles from "./TvShows.module.scss";
-
 import {allShowsSelector} from "../../store/selectors/showsSelector";
 import { getTvShows } from "../../store/reducers/tvShowReducer";
-import MoviePage from "../common/MoviePage/MoviePage";
+import MoviePage from "../../components/common/MoviePage/MoviePage";
 
 const TvShows = () => {
   const dispatch = useDispatch();

@@ -6,7 +6,7 @@ import PrivateRoute from "./utils/PrivateRoute";
 import PublicRoute from "./utils/PrivateRoute";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Loader from "./components/Loader/Loader";
-
+import Header from "./components/Header/Header";
 
 function App() {
   //Temporary isAuth === true
@@ -16,6 +16,7 @@ function App() {
     <div className={styles.container}>
       <Sidebar className={styles.sidebar} />
       <div className={styles.content}>
+      
         <Suspense fallback={<Loader />}>
           <Routes>
             {routes.map(
@@ -26,11 +27,13 @@ function App() {
                   element={
                     isPrivate ? (
                       <PrivateRoute isAuth={isAuth}>
+                        <Header/>
                         <Component {...props} />
                       </PrivateRoute>
                     ) : (
                       <PublicRoute isAuth={isAuth} isPublicOnly={isPublicOnly}>
                         <Component {...props} />
+                        <Header/>
                       </PublicRoute>
                     )
                   }

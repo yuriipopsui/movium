@@ -7,17 +7,20 @@ import SearchForm from '../common/SearchForm/SearchForm';
 function Header() {
   return (
     <div className={styles.header}>
-      <nav className={styles.header__nav}>
-      <SearchForm active={false}/>
+       <nav className={styles.header__nav}>
+      
         {
           Object.values(headerNavigationList).map(item => (
               <NavList customClassName={styles.customList} data={item} key={item.className} direction="row" />
           ))
         }
+        <SearchForm active={false}/>
       </nav>
-      <div className={styles.header__user}>user</div>
+      <div className={styles.header__user}>user</div> 
+      
+      
     </div>
   )
 }
 
-export default Header
+export default Header;

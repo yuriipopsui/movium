@@ -8,7 +8,7 @@ const PrivateRoute = ({children, isAuth}) => {
 }
 
 PrivateRoute.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.array,
   isAuth: PropTypes.bool
 }
 

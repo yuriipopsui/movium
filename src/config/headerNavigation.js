@@ -21,11 +21,11 @@ export const headerNavigationList = {
   userInfo: {
     className: "userInfo",
     listItems: [
-      {
-        name: "search",
-        iconPath: "/src/assets/icons/search.png",
-        Component: lazy(() => import('../components/common/SearchForm/SearchForm'))
-      },
+      // {
+      //   name: "search",
+      //   iconPath: "/src/assets/icons/search.png",
+      //   Component: lazy(() => import('../components/common/SearchForm/SearchForm'))
+      // },
       {
         name: "messages",
         iconPath: "/src/assets/icons/bell.png"

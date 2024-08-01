@@ -34,18 +34,19 @@ const SearchPage = () => {
   return (
     <div className={styles.container}>
       {items.length !== 0 ? (
-        // <h3>SearchPage</h3>
-        <MoviePage
-          sliderTitle="Search Result"
-          movies={items}
-          bannerSource={bannerSource()}
-        />
+        <>
+          <h3>SearchPage</h3>
+          <MoviePage
+            sliderTitle="Search Result"
+            movies={items}
+            bannerSource={bannerSource()}
+          />
+        </>
       ) : (
         <div>
           <h3>No results. Please change Your request.</h3>
-        <SearchForm active={true}/>
+          <SearchForm active={true} />
         </div>
-        
       )}
     </div>
   );

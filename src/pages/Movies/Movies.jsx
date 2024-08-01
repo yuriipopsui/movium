@@ -4,7 +4,7 @@ import styles from "./Movies.module.scss";
 
 import { allMoviesSelector } from "../../store/selectors/moviesSelector";
 import { getMovies } from "../../store/reducers/getMoviesReducer";
-import MoviePage from "../common/MoviePage/MoviePage";
+import MoviePage from "../../components/common/MoviePage/MoviePage";
 
 const Movies = () => {
   const dispatch = useDispatch();
@@ -29,7 +29,7 @@ const Movies = () => {
   
   return (
     <div className={styles.movies}>
-      <h1>All Movies</h1>
+      {/* <h1>All Movies</h1> */}
       <MoviePage sliderTitle="Movies" movies={movies} bannerSource={bannerSource()} />
     </div>
   );

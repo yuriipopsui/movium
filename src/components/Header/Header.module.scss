@@ -1,13 +1,18 @@
+@import '../../styles/variables.scss';
+
 .header {
   position: absolute;
   content: '';
-  top: 30px;
+  top: 0;
   left: 0;
   width: 100%;
+  height: 10vh;
+ backdrop-filter: blur(3px);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
+
   &__nav {
     width: 90%;
     display: flex;

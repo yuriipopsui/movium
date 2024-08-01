@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { favoritesMoviesSelector } from "../../store/selectors/moviesSelector";
-import MoviePage from "../common/MoviePage/MoviePage";
+import MoviePage from "../../components/common/MoviePage/MoviePage";
 
 axios.defaults.baseURL = import.meta.env.VITE_APP_BASE_URL;
 
@@ -42,7 +42,7 @@ const Favorites = () => {
   const bannerSource = () => {
     const randomMovie =
       movies?.length > 0 &&
-      movies[Math.floor(Math.random() * movies?.length)];
+      movies[Math.floor(Math.random() * movies?.length) - 1];
     return `https://image.tmdb.org/t/p/original/${randomMovie?.backdrop_path}`;
   };
 

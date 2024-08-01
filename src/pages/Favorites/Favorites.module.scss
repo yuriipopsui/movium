@@ -5,9 +5,12 @@
   align-items: center;
   width: 100%;
 
-  justify-content: center;
-
   &__info {
     font-size: 36px;
+  }
+
+  &__title {
+    position: absolute;
+    z-index: 1;
   }
 }
