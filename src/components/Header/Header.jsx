@@ -2,6 +2,7 @@ import styles from './Header.module.scss';
 import { headerNavigationList } from '../../config/headerNavigation';
 import NavList from '../common/NavList/NavList';
 import SearchForm from '../common/SearchForm/SearchForm';
+import User from '../User/User';
 // import Banner from '../../assets/banner_temp.png';
 
 function Header() {
@@ -16,8 +17,8 @@ function Header() {
         }
         <SearchForm active={false}/>
       </nav>
-      <div className={styles.header__user}>user</div> 
-      
+      {/* <div className={styles.header__user}>Log In</div>  */}
+      <User />
       
     </div>
   )

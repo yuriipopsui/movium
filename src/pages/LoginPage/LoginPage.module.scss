@@ -1,0 +1,45 @@
+@import "../../styles/variables.scss";
+
+.login {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 100px;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 35%;
+    height: 45%;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px $light-purple;
+    background: $bg-black;
+    padding: 10px 30px;
+
+    &_title {
+      margin-top: 15px;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+
+    &_input {
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-size: 14px;
+      line-height: 30px;
+      background: $bg-black;
+      border: 1px solid $grey;
+      outline: none;
+    }
+
+    &_button {
+      margin-top: 20px;
+      background: $light-purple;
+    }
+    &_register {
+      cursor: pointer;
+    }
+  }
+}

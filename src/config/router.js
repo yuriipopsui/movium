@@ -55,6 +55,18 @@ const routes = [
     isPrivate: false, // Temporary false, but with Authentication should be true
     isPublicOnly: false,
   },
+  {
+    path: 'login_page',
+    Component: lazy(() => import('../pages/LoginPage/LoginPage')),
+    isPrivate: false, // Temporary false, but with Authentication should be true
+    isPublicOnly: false,
+  },
+  {
+    path: 'register_page',
+    Component: lazy(() => import('../pages/RegisterPage/RegisterPage')),
+    isPrivate: false, // Temporary false, but with Authentication should be true
+    isPublicOnly: false,
+  },
 ]
 
 export default routes;
