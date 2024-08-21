@@ -8,7 +8,7 @@ const PublicRoute = ({ children, isAuth, isPublicOnly }) => {
 }
 
 PublicRoute.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.array,
   isAuth: PropTypes.bool,
   isPublicOnly: PropTypes.bool,
 }

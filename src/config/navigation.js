@@ -29,29 +29,29 @@ export const navigationListData = {
       },
     ],
   },
-  social: {
-    className: "social",
-    listItems: [
-      {
-        name: "Community",
-        link: "/community",
-        iconPath: "/src/assets/icons/users.png",
-      },
-      {
-        name: "Social",
-        link: "/social",
-        iconPath: "/src/assets/icons/message-circle.png",
-      },
-    ],
-  },
+  // social: {
+  //   className: "social",
+  //   listItems: [
+  //     {
+  //       name: "Community",
+  //       link: "/community",
+  //       iconPath: "/src/assets/icons/users.png",
+  //     },
+  //     {
+  //       name: "Social",
+  //       link: "/social",
+  //       iconPath: "/src/assets/icons/message-circle.png",
+  //     },
+  //   ],
+  // },
   settings: {
     className: "settings",
     listItems: [
-      {
-        name: "Settings",
-        link: "/settings",
-        iconPath: "/src/assets/icons/sliders.png",
-      },
+    //   {
+    //     name: "Settings",
+    //     link: "/settings",
+    //     iconPath: "/src/assets/icons/sliders.png",
+    //   },
       {
         name: "Logout",
         link: "/",
@@ -59,17 +59,4 @@ export const navigationListData = {
       },
     ],
   },
-  // setti: {
-  //   className: "setti",
-  //   listItems: [
-  //     {
-  //       name: "Setti",
-  //       iconPath: "/src/assets/icons/sliders.png",
-  //     },
-  //     {
-  //       name: "Log",
-  //       iconPath: "/src/assets/icons/log-out.png",
-  //     },
-  //   ],
-  // },
 };

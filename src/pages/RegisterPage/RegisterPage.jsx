@@ -16,52 +16,56 @@ const RegisterPage = () => {
     confirmPassword: "",
   });
 
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   //Get users List from fake storage
   const usersList = useSelector(usersSelector);
 
   const onChangeHandler = (event) => {
-    const {name, value} = event.target;
+    const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
     // Clear any existing errors when the user changes input
-    if(error) {
-      setError('');
+    if (error) {
+      setError("");
     }
   };
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
 
-    if(!formData.userName || !formData.userPassword || !formData.confirmPassword) {
-      setError('All fields are required.');
+    if (
+      !formData.userName ||
+      !formData.userPassword ||
+      !formData.confirmPassword
+    ) {
+      setError("All fields are required.");
       return;
     }
 
     if (formData.userPassword !== formData.confirmPassword) {
-      setError('Passwords do not match.');
+      setError("Passwords do not match.");
       return;
-    } 
+    }
 
     const isUserExists = usersList.some(
       (user) => user.userName === formData.userName
     );
     if (isUserExists) {
-      setError('User with this userName already exists.');
+      setError("User with this userName already exists.");
       return;
     } else {
       const newUser = {
         userName: formData.userName,
-        userPassword: formData.userPassword
-      }
+        userPassword: formData.userPassword,
+      };
       //add new User to store
       dispatch(addUser(newUser));
 
       //log In new User immediatly after successful registration
-        dispatch(LogIn(newUser));
-        navigate("/popular");
+      dispatch(LogIn(newUser));
+      navigate("/popular");
     }
-     //Reset form data after successful registration
+    //Reset form data after successful registration
     setFormData({
       userName: "",
       userPassword: "",
@@ -98,10 +102,14 @@ const RegisterPage = () => {
           value={formData.confirmPassword}
           onChange={onChangeHandler}
         />
-        {error && (
-          <p className={styles.register__form_error}>{error}</p>
-        )}
-        <button className={`${styles.register__form_button} ${error ? styles.disabled : ''}`} disabled={error}>
+        {error && <p className={styles.register__form_error}>{error}</p>}
+        <button
+          className={`${styles.register__form_button} ${
+            error ? styles.disabled : ""
+          }`}
+          type="submit"
+          disabled={error}
+        >
           Register
         </button>
       </form>

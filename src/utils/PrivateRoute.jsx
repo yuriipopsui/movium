@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const PrivateRoute = ({children, isAuth}) => {
   return (
-    isAuth ? children : <Navigate to={'/login'} />
+    isAuth ? children : <Navigate to={'/login_page'} />
   )
 }
 

@@ -12,7 +12,7 @@
     flex-direction: column;
     gap: 25px;
     width: 35%;
-    height: 45%;
+    // height: 45%;
     border-radius: 15px;
     box-shadow: 0 5px 25px $light-purple;
     background: $bg-black;
@@ -34,12 +34,44 @@
       outline: none;
     }
 
+    &_error {
+      color: red;
+      font-weight: 500;
+    }
+
     &_button {
       margin-top: 20px;
       background: $light-purple;
     }
     &_register {
+      font-size: 20px;
+      line-height: 24px;
       cursor: pointer;
+      margin-bottom: 15px;
+
+      background: linear-gradient(90deg, $white, $light-purple, $grey);
+      background-size: 300%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradient-animation 3.5s ease infinite;
     }
+  }
+}
+
+.disabled {
+  background: $grey;
+  cursor: auto;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

@@ -12,27 +12,46 @@ const LoginPage = () => {
     userName: "",
     userPassword: "",
   });
+  const [error, setError] = useState("");
   //Get users List from fake storage
   const usersList = useSelector(usersSelector);
 
   const onClickHandler = () => {
-    navigate('/register_page');
-  }
+    navigate("/register_page");
+  };
 
   const onChangeHandler = (event) => {
-    event.preventDefault();
-    setUserData({ ...userData, [event.target.name]: event.target.value });
+    const { name, value } = event.target;
+    setUserData({ ...userData, [name]: value });
+    if (error) {
+      setError("");
+    }
   };
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
 
-    const user = usersList.find(
-      (item) =>
-        item.userName === userData.userName &&
-        item.userPassword === userData.userPassword
-    );
-    user ? dispatch(LogIn(userData), navigate('/')) : navigate("/register_page");
+    if (!userData.userName || !userData.userPassword) {
+      setError("All fields are required.");
+      return;
+    }
+
+    const user = usersList.find((user) => user.userName === userData.userName);
+
+    if (!user) {
+      // User with that name not exist
+      setError("User with this userName does not exist. Register Please");
+      return;
+    } else if (user.userPassword !== userData.userPassword) {
+      // User name is correct but Password is not match
+      setError("Incorrect Password. Please try again");
+      return;
+    } else {
+      // User Name and password are correct
+      dispatch(LogIn(userData));
+      navigate("/");
+    }
+    // user ? (dispatch(LogIn(userData)), navigate('/')) : navigate("/register_page");
     setUserData({
       userName: "",
       userPassword: "",
@@ -59,12 +78,20 @@ const LoginPage = () => {
           value={userData.userPassword}
           onChange={onChangeHandler}
         />
-        <button className={styles.login__form_button} type="submit">
+        {error && <p className={styles.login__form_error}>{error}</p>}
+        <button
+          className={`${styles.login__form_button} ${
+            error ? styles.disabled : ""
+          }`}
+          type="submit"
+          disabled={error}
+        >
           Log In
         </button>
-        <h3 className={styles.login__form_register} onClick={onClickHandler}>Or Register</h3>
+        <p className={styles.login__form_register} onClick={onClickHandler}>
+          Register
+        </p>
       </form>
-      
     </div>
   );
 };
